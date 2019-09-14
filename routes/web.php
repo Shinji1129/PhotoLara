@@ -3,7 +3,7 @@
 //ログイン認証
 // Auth::routes();
 // 会員登録
-// Route::post('/register', 'PhotoController@register')->name('register');
+Route::post('/register', 'Auth\RegisterController@register')->name('register');
 // ログイン
 // Route::get('/login', 'PhotoController@register')->name('login');
 // ログアウト
@@ -12,7 +12,7 @@
 // 写真一覧
 Route::get('/list', 'PhotoController@list')->name('list');
 // 写真投稿
-Route::get('/post', 'PhotoController@post')->name('post');
+Route::post('/post', 'PhotoController@post')->name('post');
 // 写真詳細
 Route::get('/photo', 'PhotoController@detail')->name('detail');
 
