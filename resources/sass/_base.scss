@@ -3,13 +3,18 @@ body{
   padding: 0;
 }
 
-h1,ul,li{
+h1,ul,li,p,a{
   margin: 0;
   padding: 0;
+  color: #333;
 }
 
 li{
   list-style: none;
+}
+
+a{
+  text-decoration: none;
 }
 
 header,footer{
@@ -17,3 +22,22 @@ header,footer{
   width: 90%;
   margin: 0 auto;
 }
+
+button:hover{
+  cursor: pointer;
+}
+
+input{
+  width: 250px;
+  height: 2em;
+  font-size: 16px;
+  display: block;
+  outline: none;
+  margin: 0 auto 10px auto;
+}
+
+label{
+  display: block;
+  margin: 0 auto;
+}
+

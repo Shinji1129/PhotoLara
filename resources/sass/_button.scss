@@ -1,0 +1,23 @@
+.button{
+  font-size: 16px;
+  border: none;
+  outline: none;
+
+  &--close{
+    background: #c2e1ff;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  &--post{
+    display: block;
+    background: #c2e1ff;
+  }
+
+  &--auth{
+    width: 200px;
+    height: 2em;
+    background: #c2e1ff;
+  }
+}
