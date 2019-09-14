@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Photo;
 
 class PhotoController extends Controller
 {
@@ -16,8 +17,15 @@ class PhotoController extends Controller
         return view('pages.detail');
     }
 
-    public function post()
+    public function post(Request $request)
     {
-        return view('pages.post');
+        $post = new Photo();
+
+        $post->filename = $request->filename->store('public/post_images');
+
+
+        $post->save();
+
+
     }
 }

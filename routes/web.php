@@ -5,7 +5,7 @@
 // 会員登録
 Route::post('/register', 'Auth\RegisterController@register')->name('register');
 // ログイン
-// Route::get('/login', 'PhotoController@register')->name('login');
+Route::post('/login', 'Auth\LoginController@login')->name('login');
 // ログアウト
 // Route::get('/logout', 'PhotoController@register')->name('logout');
 
