@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-<div class="register">
+<div class="auth">
 
 @if($errors->any())
               <div class="alert alert-danger">
@@ -18,13 +18,13 @@
     <label for="register-email">メールアドレス</label>
     <input type="email" name="email" id="rejister-email">
     <label for="register-password">パスワード
-      <span class="register--span">＊英数字6文字以上</span>
+      <span class="auth--span">＊英数字6文字以上</span>
     </label>
     <input type="password" name="password" id="register-password">
     <label for="register-password">パスワード（確認用）</label>
     <input type="password" name="password_confirmation" id="register-confirm-password">
-    <div class="register--button">
-    <button type="submit" class="button button--register">登録</button>
+    <div class="auth--button">
+    <button type="submit" class="button button--auth">登録</button>
     </div>
   </form>
 </div>

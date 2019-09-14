@@ -7,10 +7,12 @@ use App\Photo;
 
 class PhotoController extends Controller
 {
+
     public function list()
     {
         return view('pages.list');
     }
+
 
     public function detail()
     {

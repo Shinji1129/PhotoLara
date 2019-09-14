@@ -1,20 +1,18 @@
 <?php
 
-//ログイン認証
-Auth::routes();
-// 会員登録
-Route::post('/register', 'Auth\RegisterController@register')->name('register');
-// ログイン
-Route::post('/login', 'Auth\LoginController@login')->name('login');
-// ログアウト
-Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
-
 // 写真一覧
-Route::get('/list', 'PhotoController@list')->name('list');
+Route::get('/', 'PhotoController@list');
+
+Route::group(['middleware' => 'auth'], function() {
 // 写真投稿
 Route::post('/post', 'PhotoController@post')->name('post');
+});
+
 // 写真詳細
 Route::get('/photo', 'PhotoController@detail')->name('detail');
+
+//ログイン認証
+Auth::routes();
 
 
 
