@@ -8,4 +8,19 @@
       <button class="button" type="submit">投稿</button>
     </div>
 </div>
+
+<script>
+import PhotoForm from './PhotoForm.vue'
+
+export default {
+  components: {
+    PhotoForm
+  },
+  data () {
+    return {
+      showForm: false
+    }
+  }
+}
+</script>
 @endsection
