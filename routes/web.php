@@ -1,7 +1,7 @@
 <?php
 
 //ログイン認証
-// Auth::routes();
+Auth::routes();
 // 会員登録
 Route::post('/register', 'Auth\RegisterController@register')->name('register');
 // ログイン
