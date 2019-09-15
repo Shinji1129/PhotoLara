@@ -94,7 +94,9 @@
             <form method="post" action="{{ route('post') }}" enctype="multipart/form-data">
             @csrf
               <div class="form">
-                <input type="file" name="filename">
+              <label for="photo-name">タイトル</label>
+              <input type="text" name="title" id="photo-title">
+              <input type="file" name="file">
                   <button
                     class="button button--post"
                     type="submit"
