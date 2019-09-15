@@ -20,7 +20,7 @@
 <body>
   <header>
     <div class="navbar">
-      <a href="#">
+      <a href="/">
       <h1 class="navbar--brand">PhotoLara</h1>
       </a>
       <nav class="navbar--nav">
@@ -93,8 +93,11 @@
           <div class="modal--post">
             <form method="post" action="{{ route('post') }}" enctype="multipart/form-data">
             @csrf
-              <div class="form">
-                <input type="file" name="filename">
+              <div class="modal--form">
+              <label for="photo-name" class="modal--label" onchange="previewFile()">タイトル</label>
+              <input type="text" name="title" id="photo-title">
+              <input type="file" name="file" onchange="previewFile()">
+              <img src="" alt="" class="modal--img">
                   <button
                     class="button button--post"
                     type="submit"
@@ -121,4 +124,20 @@ new Vue({
     showModal: false
   }
 })
+</script>
+
+<script>
+function previewFile() {
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.addEventListener("load", function () {
+    preview.src = reader.result;
+  }, false);
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
 </script>

@@ -36,7 +36,6 @@ input {
   width: 250px;
   height: 2em;
   font-size: 16px;
-  display: block;
   outline: none;
   margin: 0 auto 10px auto;
 }
@@ -83,6 +82,7 @@ label {
 }
 
 .button--post {
+  margin-left: 10px;
   display: block;
   background: #c2e1ff;
 }
@@ -101,7 +101,21 @@ label {
   padding: 10px 20px;
   z-index: 10;
   position: absolute;
-  top: 10px;
+  top: 30px;
+  right: 30px;
+}
+
+.modal--form {
+  margin-top: 50px;
+}
+
+.modal--label {
+  line-height: 10px;
+  width: 256px;
+}
+
+.modal--img {
+  max-width: 256px;
 }
 
 .auth {

@@ -14,9 +14,10 @@ class CretaePhotosTable extends Migration
     public function up()
     {
         Schema::create('photos', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->increments('id');
+            $table->text('title');
             $table->unsignedInteger('user_id');
-            $table->string('filename');
+            $table->string('file');
             $table->timestamps();
 
             $table->foreign('user_id')

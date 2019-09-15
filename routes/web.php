@@ -5,7 +5,7 @@ Route::get('/', 'PhotoController@list');
 
 Route::group(['middleware' => 'auth'], function() {
 // 写真投稿
-Route::post('/post', 'PhotoController@post')->name('post');
+Route::post('/', 'PhotoController@post')->name('post');
 });
 
 // 写真詳細
