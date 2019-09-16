@@ -11,7 +11,7 @@ class PhotoController extends Controller
 
     public function list()
     {
-        $photos = Photo::all();
+        $photos = \App\Photo::all();
 
         return view('pages.list', [
             'photos' => $photos,
