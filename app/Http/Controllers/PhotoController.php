@@ -11,7 +11,11 @@ class PhotoController extends Controller
 
     public function list()
     {
-        return view('pages.list');
+        $photos = Photo::all();
+
+        return view('pages.list', [
+            'photos' => $photos,
+        ]);
     }
 
 
@@ -24,12 +28,12 @@ class PhotoController extends Controller
     {
         $post = new Photo();
         $post->title = $request->title;
-        $post->file = $request->file->store('public/post_images');
+        $post->file = $request->file->store('public');
+        $post->file = str_replace('public/', '', $post->file);
         $post->user_id = Auth::user()->id;
         $post->save();
 
-        return view('pages.list');
-
+        return redirect('/');
 
     }
 }
