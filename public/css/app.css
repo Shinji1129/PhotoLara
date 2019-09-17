@@ -45,6 +45,12 @@ label {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .navbar--brand {
   display: inline-block;
   margin: 10px 20px;
@@ -62,6 +68,14 @@ label {
 
 .navbar--item {
   margin: 0 15px;
+}
+
+.navbar--logout {
+  padding: 10px 5px;
+}
+
+.navbar--logout:hover {
+  background: #c2e1ff;
 }
 
 .footer--item {
@@ -85,6 +99,14 @@ label {
   margin-left: 10px;
   display: block;
   background: #c2e1ff;
+}
+
+.button--post-action {
+  padding: 5px 10px;
+}
+
+.button--post-action:hover {
+  background: #4fa7ff;
 }
 
 .button--auth {
@@ -131,5 +153,103 @@ label {
 .auth--button {
   text-align: center;
   margin-top: 30px;
+}
+
+.list {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.list--wrap {
+  flex: auto;
+  width: 30%;
+  max-width: 300px;
+  margin: 10px 10px;
+  position: relative;
+}
+
+.list--item {
+  width: 100%;
+}
+
+.list--over-ray {
+  width: 100%;
+  height: 250px;
+  z-index: 5;
+  position: absolute;
+}
+
+.list--over-ray:hover {
+  cursor: zoom-in;
+  background: #33333330;
+}
+
+.list--title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.list--like {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.list--download {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.list--icon {
+  background: #ffffff90;
+  padding: 0 6px;
+  border-radius: 3px;
+}
+
+.list--image {
+  height: 250px;
+  width: 100%;
+  z-index: 0.5;
+}
+
+.fa-cloud-upload-alt {
+  margin-right: 5px;
+  color: #4fa7ff;
+}
+
+.fa-heart {
+  margin-right: 5px;
+  color: #ff516e;
+}
+
+.fa-cloud-download-alt {
+  margin-right: 5px;
+  color: #4fa7ff;
+}
+
+.pagination {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination--item {
+  padding: 5px;
+}
+
+.pagination--link {
+  padding: 5px 10px;
+}
+
+.pagination--action:hover {
+  background: #4fa7ff;
 }
 

@@ -18,4 +18,12 @@
   &--item{
     margin: 0 15px;
   }
+
+  &--logout{
+    padding: 10px 5px;
+  }
+
+  &--logout:hover{
+    background: #c2e1ff;
+  }
 }

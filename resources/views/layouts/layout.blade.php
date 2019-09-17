@@ -29,11 +29,11 @@
             <!-- app -->
             <div id="app">
               <button
-                class="button"
+                class="button button--post-action"
                 id="show-modal"
                 @click="showModal = true"
               >
-              <i class="fas fa-plus"></i>
+              <i class="fas fa-cloud-upload-alt"></i>
               投稿</button>
               <modal v-if="showModal" @close="showModal = false"></modal>
             </div>
@@ -41,7 +41,7 @@
           @if(Auth::check())
           <li class="navbar--item">{{ Auth::user()->name }}</li>
           <li class="navbar--item">
-          <a href="#" id="logout">ログアウト</a>
+          <a class="navbar--logout" href="#" id="logout">ログアウト</a>
           <form method="POST" action="{{ route('logout') }}" style="display: none;" id="logout-form">
           @csrf
           </form>
