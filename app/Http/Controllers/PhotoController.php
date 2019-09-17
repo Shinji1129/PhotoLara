@@ -11,7 +11,8 @@ class PhotoController extends Controller
 
     public function list()
     {
-        $photos = \App\Photo::all();
+        $photos = Photo::with(['owner'])
+           ->orderBy(Photo::CREATED_AT, 'desc')->paginate();
 
         return view('pages.list', [
             'photos' => $photos,

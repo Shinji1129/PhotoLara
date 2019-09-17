@@ -11,6 +11,8 @@ class Photo extends Model
         'owner',
     ];
 
+    protected $perPage = 6;
+
     /**
      * リレーション - usersテーブル
      * @return
