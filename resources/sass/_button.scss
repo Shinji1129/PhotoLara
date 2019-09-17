@@ -16,6 +16,14 @@
     background: #c2e1ff;
   }
 
+  &--post-action{
+    padding: 5px 10px;
+  }
+
+  &--post-action:hover{
+    background: #4fa7ff;
+  }
+
   &--auth{
     width: 200px;
     height: 2em;

@@ -70,6 +70,14 @@ img {
   margin: 0 15px;
 }
 
+.navbar--logout {
+  padding: 10px 5px;
+}
+
+.navbar--logout:hover {
+  background: #c2e1ff;
+}
+
 .footer--item {
   text-align: center;
 }
@@ -91,6 +99,14 @@ img {
   margin-left: 10px;
   display: block;
   background: #c2e1ff;
+}
+
+.button--post-action {
+  padding: 5px 10px;
+}
+
+.button--post-action:hover {
+  background: #4fa7ff;
 }
 
 .button--auth {
@@ -151,6 +167,7 @@ img {
 .list--wrap {
   flex: auto;
   width: 30%;
+  max-width: 300px;
   margin: 10px 10px;
   position: relative;
 }
@@ -201,15 +218,38 @@ img {
   z-index: 0.5;
 }
 
-i {
+.fa-cloud-upload-alt {
   margin-right: 5px;
+  color: #4fa7ff;
 }
 
 .fa-heart {
+  margin-right: 5px;
   color: #ff516e;
 }
 
 .fa-cloud-download-alt {
+  margin-right: 5px;
   color: #4fa7ff;
+}
+
+.pagination {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination--item {
+  padding: 5px;
+}
+
+.pagination--link {
+  padding: 5px 10px;
+}
+
+.pagination--action:hover {
+  background: #4fa7ff;
 }
 

@@ -1,0 +1,19 @@
+.pagination{
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+
+  &--item{
+    padding: 5px;
+  }
+
+  &--link{
+    padding: 5px 10px;
+  }
+
+  &--action:hover{
+    background: #4fa7ff;
+  }
+}

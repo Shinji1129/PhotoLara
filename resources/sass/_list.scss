@@ -9,12 +9,14 @@
   &--wrap{
     flex: auto;
     width: 30%;
+    max-width: 300px;
     margin: 10px 10px;
     position: relative;
   }
 
   &--item{
     width: 100%;
+
   }
 
   &--over-ray{
