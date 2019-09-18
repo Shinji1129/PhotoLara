@@ -9,7 +9,7 @@
   &--wrap{
     flex: auto;
     width: 30%;
-    max-width: 300px;
+    max-width: 35%;
     margin: 10px 10px;
     position: relative;
   }
@@ -38,15 +38,29 @@
   }
 
   &--like{
+    z-index: 5;
     position: absolute;
     bottom: 10px;
     left: 10px;
+
+    &:hover{
+      border:2px solid #ff516e;
+      border-radius: 3px;
+      background: #fff;
+    }
   }
 
   &--download{
+    z-index: 5;
     position: absolute;
     bottom: 10px;
     right: 10px;
+
+    &:hover{
+      border:2px solid #4fa7ff;
+      border-radius: 3px;
+      background: #fff;
+    }
   }
 
   &--icon{
