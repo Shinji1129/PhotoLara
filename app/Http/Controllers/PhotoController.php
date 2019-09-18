@@ -5,10 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Photo;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PhotoController extends Controller
 {
 
+    /**
+     * 写真一覧
+     * @return
+     */
     public function list()
     {
         $photos = Photo::with(['owner'])
@@ -20,7 +25,10 @@ class PhotoController extends Controller
     }
 
 
-    //**写真詳細 */
+    /**
+     * 写真詳細
+     * @return
+     */
     public function detail($id)
     {
         $photo = Photo::where('id', $id)->with(['owner'])->get();
@@ -30,14 +38,21 @@ class PhotoController extends Controller
         ]);
     }
 
+    /**
+     * 写真投稿
+     * @return
+     */
     public function post(Request $request)
     {
-        $post = new Photo();
-        $post->title = $request->title;
-        $post->file = $request->file->store('public');
-        $post->file = str_replace('public/', '', $post->file);
-        $post->user_id = Auth::user()->id;
-        $post->save();
+        $photo = new Photo;
+
+        $photo->user_id = Auth::user()->id;
+        $photo->title = $request->title;
+        $photo->file = $request->file('file');
+        $path = Storage::disk('s3')->putFile('images', $photo->file, 'public');
+        $photo->file = Storage::disk('s3')->url($path);
+
+        $photo->save();
 
         return redirect('/');
 
