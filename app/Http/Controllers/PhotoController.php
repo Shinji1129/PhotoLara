@@ -20,9 +20,14 @@ class PhotoController extends Controller
     }
 
 
-    public function detail()
+    //**写真詳細 */
+    public function detail($id)
     {
-        return view('pages.detail');
+        $photo = Photo::where('id', $id)->with(['owner'])->get();
+
+        return view('pages.detail', [
+            'photos' => $photo,
+        ]);
     }
 
     public function post(Request $request)

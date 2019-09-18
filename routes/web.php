@@ -9,7 +9,7 @@ Route::post('/', 'PhotoController@post')->name('post');
 });
 
 // 写真詳細
-Route::get('/photo', 'PhotoController@detail')->name('detail');
+Route::get('/photo/{id}/', 'PhotoController@detail')->name('detail');
 
 //ログイン認証
 Auth::routes();
