@@ -40,21 +40,22 @@ class PhotoController extends Controller
 
     /**
      * 写真投稿
+     * @param Request $request
      * @return
      */
     public function post(Request $request)
     {
         $photo = new Photo;
+        $disk = Storage::disk('s3');
 
         $photo->user_id = Auth::user()->id;
         $photo->title = $request->title;
         $photo->file = $request->file('file');
-        $path = Storage::disk('s3')->putFile('images', $photo->file, 'public');
+        $path = $disk->putFile('', $photo->file, 'public');
         $photo->file = Storage::disk('s3')->url($path);
 
         $photo->save();
 
         return redirect('/');
-
     }
 }
