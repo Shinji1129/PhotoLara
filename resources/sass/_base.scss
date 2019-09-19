@@ -9,6 +9,10 @@ h1,ul,li,p,a{
   color: #333;
 }
 
+p{
+  overflow-wrap: break-word;
+}
+
 li{
   list-style: none;
 }
